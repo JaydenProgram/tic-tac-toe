@@ -67,7 +67,7 @@ function setGame() {
     if (gameType !== "crazy" && gameType !== "crazy-bot") {
         board.style.width = normalboard + "px";
         board.style.height = normalboard + "px";
-        board.style.backgroundImage = "url('public/tic-tac-to-bg.png')";
+        board.style.backgroundImage = "url('tic-tac-to-bg.png')";
         for (let i = 0; i < 9; i++) {
             box = document.createElement("div");
             box.id = i.toString();
@@ -79,7 +79,7 @@ function setGame() {
     } else {
         board.style.width = crazyBoard + "px";
         board.style.height = crazyBoard + "px";
-        board.style.backgroundImage = "url('public/crazy-board.png')";
+        board.style.backgroundImage = "url('crazy-board.png')";
         for (let i = 0; i < 36; i++) {
             box = document.createElement("div");
             box.id = i.toString();
@@ -140,7 +140,7 @@ function aiPlayer() {
             let boxToFill = document.getElementById(bestMove.toString());
             if (boxToFill) {
                 const img = document.createElement("img");
-                img.src = "public/circle.png"; // AI's image
+                img.src = "circle.png"; // AI's image
                 boxToFill.appendChild(img);
                 boxToFill.classList.add(player_2_class);
                 boardState[bestMove] = player_2_class; // Update board state
@@ -244,7 +244,7 @@ function clickEvent() {
 
     if (!boardState[box.id]) { // Check if the box is empty
         const img = document.createElement("img");
-        img.src = player_1_turn ? "public/cross.png" : "public/circle.png"; // Select correct image
+        img.src = player_1_turn ? "cross.png" : "circle.png"; // Select correct image
         box.appendChild(img);
         box.classList.add(currentClass);
         boardState[box.id] = currentClass; // Update board state

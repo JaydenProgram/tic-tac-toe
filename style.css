@@ -16,8 +16,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  background-image: url("public/tic-tac-to-bg.png");
-
+  background-image: url("./tic-tac-to-bg.png");
 }
 
 #board div {
