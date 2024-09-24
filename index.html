@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card game</title>
+  </head>
+  <body>
+    <div>
+      <label for="game-chooser">
+      <select name="Choose game type" id="game-chooser">
+        <option value="normal">Normal</option>
+        <option value="bot">AI</option>
+        <option value="crazy">Crazy... WIP</option>
+        <option value="crazy-bot">Crazy AI</option>
+      </select>
+      </label>
+    </div>
+    <div id="board"></div>
+    <h1 id="winner">Who will win</h1>
+    <button id="restart">Restart the game</button>
+    <input type="range" id="depth-slider" min="1" max="10" value="4" />
+    <label for="depth-slider">AI Depth: <span id="depth-value">4</span></label>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
